@@ -22,7 +22,8 @@ export default function Footer() {
       }}
     >
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 4, flexDirection: {sl: 'column', sm: 'column', md: 'row' }, gap: 5}}>
-            <Box >
+            {/* About */}
+            <Box sx={{display: {sm: 'none',md: 'block'}}}>
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2, gap: 2 }}>
                     <Image src='/favicon/favicon.svg' width={50} height={50} alt='img' />
                     <Typography variant="h6" fontWeight="bold" color='white'>HumanEra Intelligence</Typography>
@@ -31,7 +32,8 @@ export default function Footer() {
                     HumanEra Intelligence is built on the belief that the future of AI lies not in replication, but in revelation—of human spirit, emotional depth, and limitless inner potential. We don’t make machines more human—we help humans become more whole.
                 </Typography>
             </Box>
-            <Box sx={{ display: 'flex', gap: 8 }}>
+            {/* Links */}
+            <Box sx={{ display: {sm: 'none', md: 'flex'}, gap: 8 }}>
                 <Box>  
                     <Typography fontWeight="bold" gutterBottom>
                         QUICK LINK
@@ -61,7 +63,7 @@ export default function Footer() {
                     </Link>
                 </Box>
             </Box>
-               
+            {/* Social */}
             <Box>
                 <Typography sx={{textAlign: 'center'}} gutterBottom>
                     STAY CONNECTED WITH US
@@ -77,8 +79,8 @@ export default function Footer() {
         </Box>
 
       {/* Bottom Bar */}
-      <Box mt={5} pt={2} borderTop="1px solid rgba(255,255,255,0.1)" display="flex" flexDirection={{ xs: 'column', sm: 'row' }} justifyContent="space-between" alignItems="center">
-            <Typography variant="body2" color="gray">
+      <Box mt={5} pt={2} borderTop="1px solid rgba(255,255,255,0.1)" display="flex" flexDirection={{ xs: 'column', sm: 'row' }} justifyContent={{sm: 'center', md: "space-between"}} alignItems="center">
+            <Typography variant="body2" color="gray" sx={{display: {sm: 'none', md: 'inline-block'}}} >
             © 2025 HumanEra Intelligence. All rights reserved.
             </Typography>
             <Box display="flex" gap={2} mt={{ xs: 1, sm: 0 }}>

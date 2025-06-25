@@ -6,6 +6,7 @@ import Vision from '@components/Vision/Vision'
 import Potential from '@components/Potential/Potential'
 import Testimonial from '@components/Testimonial/Testimonial'
 import Footer from '@components/Footer/Footer'
+import Faq from '@components/FAQ/Faq'
 export default function Page() {
     return(
         <>
@@ -17,6 +18,7 @@ export default function Page() {
             <Container>
                 <Potential />
                 <Testimonial />
+                <Faq />
             </Container>
             <Footer />
         </>
