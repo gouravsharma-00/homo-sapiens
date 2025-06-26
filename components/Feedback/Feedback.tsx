@@ -17,15 +17,30 @@ export default function FeedbackForm() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // You can send `form` to your backend here
-    console.log('Submitted:', form);
+  try {
+    const res = await fetch('api/feedback', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        message: form.message
+      }),
+    });
 
-    // Reset form and show feedback message
-    setForm({ name: '', email: '', message: '' });
-    setOpen(true);
+      if (res.ok) {
+        setForm({ name: '', email: '', message: '' });
+        setOpen(true);
+      } else {
+        const data = await res.json();
+        alert('Error: ' + data.error);
+      }
+    } catch (err) {
+      console.error('Feedback submit failed', err);
+    }
   };
 
   return (

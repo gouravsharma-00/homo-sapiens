@@ -21,9 +21,9 @@ export default function Footer() {
         marginTop: 5
       }}
     >
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 4, flexDirection: {sl: 'column', sm: 'column', md: 'row' }, gap: 5}}>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 4, flexDirection: {xs: 'column', sm: 'column', md: 'row' }, gap: 5}}>
             {/* About */}
-            <Box sx={{display: {sm: 'none',md: 'block'}}}>
+            <Box sx={{display: {xs: 'none', md: 'block'}}}>
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2, gap: 2 }}>
                     <Image src='/favicon/favicon.svg' width={50} height={50} alt='img' />
                     <Typography variant="h6" fontWeight="bold" color='white'>HumanEra Intelligence</Typography>
@@ -33,7 +33,7 @@ export default function Footer() {
                 </Typography>
             </Box>
             {/* Links */}
-            <Box sx={{ display: {sm: 'none', md: 'flex'}, gap: 8 }}>
+            <Box sx={{ display: {xs: 'none', lg: 'flex'}, gap: 8 }}>
                 <Box>  
                     <Typography fontWeight="bold" gutterBottom>
                         QUICK LINK
@@ -80,7 +80,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <Box mt={5} pt={2} borderTop="1px solid rgba(255,255,255,0.1)" display="flex" flexDirection={{ xs: 'column', sm: 'row' }} justifyContent={{sm: 'center', md: "space-between"}} alignItems="center">
-            <Typography variant="body2" color="gray" sx={{display: {sm: 'none', md: 'inline-block'}}} >
+            <Typography variant="body2" color="gray" sx={{display: {xs: 'none', md: 'inline-block'}}} >
             © 2025 HumanEra Intelligence. All rights reserved.
             </Typography>
             <Box display="flex" gap={2} mt={{ xs: 1, sm: 0 }}>

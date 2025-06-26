@@ -56,7 +56,9 @@ export default function Philosophy() {
                 </Typography>
                 <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: 2, justifyContent: 'center', marginTop: 4 }}>
                     <Card variant="outlined" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'left', borderRadius: 4, p: 3, gap: 2 }}>
-                        <Image src='/images/img-4.svg' alt='img' width={50} height={50} />
+                        <Box sx={{ width: {xs: '50', lg: '50px'}, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                            <Image src='/images/img-4.svg' alt='img' width={50} height={50} />
+                        </Box>
                         <Typography fontWeight='bold'>Traditional AI</Typography>
                         <CardContent sx={{ pt: 0 }}>
                             <List>
@@ -77,7 +79,9 @@ export default function Philosophy() {
                         </CardContent>
                     </Card>
                     <Card variant="outlined" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'left', borderRadius: 4, p: 3, gap: 2 }}>
-                        <Image src='/images/img-4.svg' alt='img' width={50} height={50} />
+                        <Box sx={{ width: {xs: '50', lg: '50px'}, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                            <Image src='/images/img-4.svg' alt='img' width={50} height={50} />
+                        </Box>
                         <Typography fontWeight='bold'>HumanEra Approach</Typography>
                         <CardContent sx={{ pt: 0 }}>
                             <List>

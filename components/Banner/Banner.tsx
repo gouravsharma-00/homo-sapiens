@@ -32,8 +32,13 @@ export default function Banner() {
                     </Toolbar>
                 </Container>
             </AppBar>
-            <Box sx={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden' }}>
-                <Image src='/images/background.jpg' alt='bg' fill style={{ objectFit: 'cover' }} />
+            <Box sx={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden',
+                backgroundImage: 'url(/images/background.jpg)',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: { xs: 'right', md: 'center' },
+            }}>
+                
                 <Box 
                 sx={{
                     position: 'absolute',
